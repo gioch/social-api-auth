@@ -1,0 +1,18 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+
+development:
+  <<: *default
+  database: social-api-auth_development
+
+test:
+  <<: *default
+  database: social-api-auth_test
+
+production:
+  <<: *default
+  database: social-api-auth_production
+  username: social-api-auth
+  password: social-api-auth_production_password
