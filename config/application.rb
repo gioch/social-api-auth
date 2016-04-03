@@ -19,14 +19,6 @@ module BundleApi
     config.api_only = true
     config.generators.test_framework = false
 
-    ActionMailer::Base.smtp_settings = {
-      port: '587',
-      address: ENV['BUNDLE_MANDRILL_ADDRESS'],
-      user_name: ENV['BUNDLE_MANDRILL_USER_NAME'],
-      password: ENV['BUNDLE_MANDRILL_PASSWORD'],
-      authentication: :plain
-    }
-
     config.middleware.insert_before 0, Rack::Cors do
       allow do
         origins '*'

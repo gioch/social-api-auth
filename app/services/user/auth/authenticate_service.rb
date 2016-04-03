@@ -47,7 +47,6 @@ private
     @params[:email].present?
   end
 
-  ## TODO: Move this to appropriate place, waiting for ideas(@jani, @davit)
   def check_param_validness
     errors = Hash.new
     errors[:uid] = ['Uid cant be blank'] if @params[:uid].blank?
